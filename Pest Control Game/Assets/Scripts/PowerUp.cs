@@ -9,7 +9,7 @@ public class PowerUp : MonoBehaviour {
         if (c.attachedRigidbody != null && c.GetComponent<PowerUpCollector>() != null)
         {
             PowerUpCollector puc = c.attachedRigidbody.gameObject.GetComponent<PowerUpCollector>();
-            Destroy(this.gameObject);
+           // Destroy(this.gameObject);
             puc.ReceivePU();
         }
     }
