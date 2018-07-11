@@ -13,9 +13,13 @@ public class CharacterInputController : MonoBehaviour
     public float walkSpeed = 1.0f;
     public int count = 0;
     public bool isColliding = false;
+
+    public bool hasPU;
+
     void Start()
     {
         anim = GetComponent<Animator>();
+        hasPU = GetComponent<PowerUpCollector>().hasPU;
     }
 
     void OnCollisionEnter (Collider target)
@@ -56,6 +60,10 @@ public class CharacterInputController : MonoBehaviour
                     {
                         anim.Play("HumanoidRunRight");
                     }
+                }
+                if (translation == 0)
+                {
+                    anim.Play("HumanoidIdle");
                 }
             }
             else
