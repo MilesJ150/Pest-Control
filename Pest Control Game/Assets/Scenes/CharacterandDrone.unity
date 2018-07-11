@@ -5343,7 +5343,7 @@ GameObject:
   - component: {fileID: 274292547}
   m_Layer: 0
   m_Name: Speed_Boost
-  m_TagString: Untagged
+  m_TagString: PU
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5359,6 +5359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd970aab183a9774b88e6607e61793fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  savedTime: 0
 --- !u!135 &274292548
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5366,7 +5367,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 274292546}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -31082,17 +31083,19 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1604424733}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47410efb37dd2104b8d44780ad0d3cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  rotationSpeed: 1
-  runSpeed: 5
-  walkSpeed: 3
+  rotationSpeed: 75
+  runSpeed: 3
+  walkSpeed: 1
   count: 0
   isColliding: 0
+  timeSaved: 0
+  hasPU: 0
 --- !u!136 &1604424737
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -31166,6 +31169,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b990a869d03684429bd5fc5135fbf44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1604424743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1604424733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857c81053c99fb044910c221bb155842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  v: 0
+  h: 0
 --- !u!1 &1605911140
 GameObject:
   m_ObjectHideFlags: 0
@@ -32144,7 +32160,7 @@ Prefab:
         type: 2}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 41bf2c29a48d2d94cabe7210e76b7d95, type: 2}
+      objectReference: {fileID: 9100000, guid: 8bbafcb848482f74e9b36a05908ae8f9, type: 2}
     - target: {fileID: 4208003243363582, guid: 8ee5a3dca8fd4c2409e05f10ec3f7152, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180.00002
@@ -32167,6 +32183,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1492683137622830, guid: 8ee5a3dca8fd4c2409e05f10ec3f7152, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247524724388942, guid: 8ee5a3dca8fd4c2409e05f10ec3f7152, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.101018645
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247524724388942, guid: 8ee5a3dca8fd4c2409e05f10ec3f7152, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.045551278
+      objectReference: {fileID: 0}
+    - target: {fileID: 95827277211280348, guid: 8ee5a3dca8fd4c2409e05f10ec3f7152,
+        type: 2}
+      propertyPath: m_ApplyRootMotion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

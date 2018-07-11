@@ -14,6 +14,7 @@ public class CharacterInputController : MonoBehaviour
     public int count = 0;
     public bool isColliding = false;
 
+    public float timeSaved;
     public bool hasPU;
 
     void Start()
@@ -24,10 +25,18 @@ public class CharacterInputController : MonoBehaviour
 
     void OnCollisionEnter (Collider target)
     {
+        count += 1;
         if (target.gameObject.tag.Equals("wall") == true)
         {
-            isColliding = true;
+            isColliding = true; 
         }
+        if (target.gameObject.tag.Equals("PU") == true)
+        {
+            hasPU = GetComponent<PowerUpCollector>().hasPU;
+            //Destroy(target.gameObject);
+            timeSaved = GetComponent<PowerUp>().savedTime;
+        }
+
     }
     void Update()
     {
@@ -40,7 +49,7 @@ public class CharacterInputController : MonoBehaviour
 
         if (!isColliding)
         {
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift) && timeSaved >= 0)
             {
                 if (translation != 0)
                 {
@@ -99,7 +108,6 @@ public class CharacterInputController : MonoBehaviour
             }
             if (Input.GetButtonDown("Jump"))
             {
-                count += 1;
                 anim.Play("HumanoidIdleJumpUp");
                 anim.SetTrigger("isJumping");
             }

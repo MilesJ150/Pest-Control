@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour {
 
+    public float savedTime;
     void OnTriggerEnter(Collider c)
     {
         if (c.attachedRigidbody != null)
@@ -13,6 +14,7 @@ public class PowerUp : MonoBehaviour {
             {
                 Destroy(this.gameObject);
                 pc.ReceivePU();
+                savedTime = Time.time;
             }
         }
         /*if (c.attachedRigidbody != null && c.GetComponent<PowerUpCollector>() != null)
