@@ -19,12 +19,20 @@ public class CharacterInputControllerTest : MonoBehaviour {
         h = Input.GetAxis("Horizontal");
         if (v > 0)
         {
-            anim.SetBool("isWalking", true);
+            if (Input.GetKey(KeyCode.LeftShift) && v != 0)
+            {
+                anim.SetBool("isRunning 0", true);
+                anim.SetBool("isWalking", false);
+            } else if (!Input.GetKey(KeyCode.LeftShift) && v != 0)
+            {
+                anim.SetBool("isWalking", true);
+                anim.SetBool("isRunning 0", false);
+            }
         } else
         {
             anim.SetBool("isWalking", false);
         }
-        if (h < 0)
+        if (v < 0)
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
@@ -34,7 +42,7 @@ public class CharacterInputControllerTest : MonoBehaviour {
                 anim.SetTrigger("left");
             }
         }
-        if (h > 0)
+        if (v > 0)
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
@@ -43,6 +51,13 @@ public class CharacterInputControllerTest : MonoBehaviour {
             {
                 anim.SetTrigger("right");
             }
+        }
+        if (v == 0)
+        {
+            anim.SetBool("isIdle", true);
+        } else
+        {
+            anim.SetBool("isIdle", false);
         }
 
 	}
