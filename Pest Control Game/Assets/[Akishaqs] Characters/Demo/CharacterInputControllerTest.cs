@@ -25,6 +25,7 @@ public class CharacterInputControllerTest : MonoBehaviour
         v = Input.GetAxis("Vertical");
         h = Input.GetAxis("Horizontal");
         hasPU = GetComponent<PowerUpCollector>().hasPU;
+        transform.Rotate(0, h, 0);
         if (hasPU)
         {
             runTimeCount = 5;
