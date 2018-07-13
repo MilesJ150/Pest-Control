@@ -9,7 +9,6 @@ public class LevelOver : MonoBehaviour {
     {
         if (c.attachedRigidbody != null)
         {
-            print("Level Over Boi");
             SceneManager.LoadScene("GameOverScreen");
         }
     }
