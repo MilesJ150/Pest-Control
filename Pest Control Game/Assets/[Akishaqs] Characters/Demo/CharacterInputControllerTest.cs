@@ -10,20 +10,23 @@ public class CharacterInputControllerTest : MonoBehaviour
     public float h;
     public bool hasPU;
     public float runTimeCount;
+    public float speed = 1.0f;
     public bool reseted = false;
 
     // Use this for initialization
     void Start()
     {
         anim = GetComponent<Animator>();
+        anim.SetBool("isRunning 0", false);
+        anim.SetBool("isWalking", true);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        v = Input.GetAxis("Vertical");
-        h = Input.GetAxis("Horizontal");
+        v = Input.GetAxis("Vertical") * speed;
+        h = Input.GetAxis("Horizontal") * speed;
         hasPU = GetComponent<PowerUpCollector>().hasPU;
         transform.Rotate(0, h, 0);
         if (hasPU)
