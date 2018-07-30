@@ -51,7 +51,7 @@ public class CharacterInputControllerTest : MonoBehaviour
         if (hasRifle)
         {
             gameObject.transform.GetChild(3).gameObject.SetActive(true);
-            //Debug.Log("hasRifle");
+            Debug.Log("hasRifle");
         }
         if (hasTimePill)
         {
