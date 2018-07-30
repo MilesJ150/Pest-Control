@@ -7,6 +7,8 @@ TagManager:
   - player
   - wall
   - PU
+  - rifle
+  - enemy
   layers:
   - Default
   - TransparentFX

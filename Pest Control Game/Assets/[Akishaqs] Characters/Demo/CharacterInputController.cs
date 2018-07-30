@@ -16,11 +16,15 @@ public class CharacterInputController : MonoBehaviour
 
     public float timeSaved;
     public bool hasPU;
+    public bool hasRifle;
+    public float shootRange = 100f;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         hasPU = GetComponent<PowerUpCollector>().hasPU;
+        hasRifle = GetComponent<PowerUpCollector>().hasRifle;
+        gameObject.transform.GetChild(3).gameObject.SetActive(false);
     }
 
     void OnCollisionEnter (Collider target)
@@ -36,10 +40,23 @@ public class CharacterInputController : MonoBehaviour
             //Destroy(target.gameObject);
             timeSaved = GetComponent<PowerUp>().savedTime;
         }
+        if (target.gameObject.tag.Equals("rifle") == true)
+        {
+            hasRifle = GetComponent<PowerUpCollector>().hasRifle;
+            gameObject.transform.GetChild(3).gameObject.SetActive(true);
+            Debug.Log("isActive");
+        }
 
     }
     void Update()
     {
+        if(hasRifle)
+        {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                Shoot();
+            }
+        }
         float translation = Input.GetAxis("Vertical");
         float rotation = Input.GetAxis("Horizontal");
         //translation += Time.deltaTime;
@@ -111,6 +128,15 @@ public class CharacterInputController : MonoBehaviour
                 anim.Play("HumanoidIdleJumpUp");
                 anim.SetTrigger("isJumping");
             }
+        }
+    }
+
+    void Shoot()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(gameObject.transform.GetChild(3).gameObject.transform.position, gameObject.transform.GetChild(3).gameObject.transform.forward, out hit, shootRange))
+        {
+            Debug.Log(hit.transform.name);
         }
     }
     

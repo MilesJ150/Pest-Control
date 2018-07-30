@@ -5,10 +5,12 @@ using UnityEngine;
 public class PowerUpCollector : MonoBehaviour
 {
     public bool hasPU;
+    public bool hasRifle;
     // Use this for initialization
     void Start()
     {
         hasPU = false;
+        hasRifle = false;
     }
 
     // Update is called once per frame
@@ -20,5 +22,10 @@ public class PowerUpCollector : MonoBehaviour
     public void ReceivePU()
     {
         hasPU = true;
+    }
+
+    public void ReceiveRifle()
+    {
+        hasRifle = true;
     }
 }
