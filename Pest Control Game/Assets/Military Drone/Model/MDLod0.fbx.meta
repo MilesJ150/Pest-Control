@@ -1,0 +1,132 @@
+fileFormatVersion: 2
+guid: 7f00b42e39fc479458e5014bdaadb72b
+timeCreated: 1506979365
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Cabin
+    100002: Cabin_end
+    100004: Gatlinggun.Left
+    100006: Gatlinggun.Left_end
+    100008: Gatlinggun.Right
+    100010: Gatlinggun.Right_end
+    100012: JetLocation.Left
+    100014: JetLocation.Right
+    100016: JetRotation.Left
+    100018: JetRotation.Right
+    100020: JetTurbo.Left
+    100022: JetTurbo.Left_end
+    100024: JetTurbo.Right
+    100026: JetTurbo.Right_end
+    100028: //RootNode
+    100030: MDLod0
+    100032: Military Drone
+    100034: RootShip
+    400000: Cabin
+    400002: Cabin_end
+    400004: Gatlinggun.Left
+    400006: Gatlinggun.Left_end
+    400008: Gatlinggun.Right
+    400010: Gatlinggun.Right_end
+    400012: JetLocation.Left
+    400014: JetLocation.Right
+    400016: JetRotation.Left
+    400018: JetRotation.Right
+    400020: JetTurbo.Left
+    400022: JetTurbo.Left_end
+    400024: JetTurbo.Right
+    400026: JetTurbo.Right_end
+    400028: //RootNode
+    400030: MDLod0
+    400032: Military Drone
+    400034: RootShip
+    4300000: Military Drone
+    7400000: MDLod0|GDer Shoot
+    7400002: MDLod0|GDer Start
+    7400004: MDLod0|GIzq Shoot
+    7400006: MDLod0|GIzq Start
+    7400008: MDLod0|Idle
+    7400010: MDLod0|JetDerShoot
+    7400012: MDLod0|JetIzqShoot
+    7400014: MDLod0|JetsOn
+    7400016: MDLod0|Manuever1
+    7400018: MDLod0|Manuever2
+    7400020: MDLod0|Shield
+    9500000: //RootNode
+    13700000: Military Drone
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
