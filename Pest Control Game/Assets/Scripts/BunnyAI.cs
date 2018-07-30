@@ -15,10 +15,13 @@ public class BunnyAI : MonoBehaviour {
 	public Vector3 agentVelocity;
 	public float distance;
 	public float melee_threshold;
+	public float footstep_threshold;
 	public float multiplier;
 	public float offset;
 	public NavMeshHit hit;
 	public float agentSpeed;
+	public AudioSource enemyFootStepSource;
+	public int counter;
 	public enum AIState
 	{
 		Patrol,
@@ -27,11 +30,13 @@ public class BunnyAI : MonoBehaviour {
 		//InterceptPlayer,
 		//AttackPlayerWithMelee,
 		ChasePlayer,
+		PlaySound,
 		HitPlayerWithMeleeWeapon
 		//TODO more? states…
 	};
 	// Use this for initialization
 	void Start () {
+		counter = 1;
 		agent = GetComponent<NavMeshAgent> ();
 		anim = GetComponent<Animator> ();
 		currWaypoint = -1;
@@ -45,6 +50,7 @@ public class BunnyAI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		counter++;
 		velocity = vr.prevVelocity;
 		pos = movingWayPoint.transform.position;
 		distance = Vector3.Distance(pos,this.transform.position);
@@ -58,7 +64,16 @@ public class BunnyAI : MonoBehaviour {
 			if (distance < melee_threshold) 
 			{
 				aiState = AIState.HitPlayerWithMeleeWeapon;
-			} else {
+			} 
+
+			else {
+				if (distance > melee_threshold && distance < footstep_threshold && counter % 15 ==0) {
+					enemyFootStepSource.Play ();
+
+
+				} else {
+					enemyFootStepSource.Pause ();
+				}
 				if (agent.remainingDistance <= 1 && !agent.pathPending) {
 					setNextWaypoint ();
 				}
@@ -93,6 +108,10 @@ public class BunnyAI : MonoBehaviour {
 
 	}
 
+	IEnumerator waitFor1Second() {
+		yield return new WaitForSeconds (1);
+		print ("123");
+	}
 	private void setNextWaypoint() {
 		if (waypoints.Length == 0) {
 			Debug.Log ("invalid waypoints");
