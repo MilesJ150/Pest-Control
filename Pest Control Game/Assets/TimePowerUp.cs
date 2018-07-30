@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class TimePowerUp : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    float collectedTime = 0f;
+    void OnTriggerEnter(Collider c)
+    {
+        if (c.attachedRigidbody != null)
+        {
+            PowerUpCollector pc = c.attachedRigidbody.gameObject.GetComponent<PowerUpCollector>();
+            if (pc != null)
+            {
+                Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
+                pc.ReceiveTimePill();
+                collectedTime = 30f;
+            }
+        }
+    }
 }
