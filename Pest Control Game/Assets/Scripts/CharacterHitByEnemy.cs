@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterHitByEnemy : MonoBehaviour {
-	private Vector3 spawnPos;
+    private Vector3 spawnPos;
 	private bool isHit;
 	// Use this for initialization
-	void Start () {
+    void Start () {
 		isHit = false;
 		spawnPos = this.transform.position;
 	}
+
+    public  void SetSpawnPos(Transform trans)
+    {
+        spawnPos = trans.position;
+    }
 
 	public bool GetHitInfo() {
 		return isHit;
