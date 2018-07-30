@@ -10,6 +10,7 @@ public class CharacterInputControllerTest : MonoBehaviour
     public float h;
     public bool hasPU;
     public bool hasRifle;
+    public bool hasTimePill;
     public float runTimeCount;
     public float speed = 1.0f;
     public bool reseted = false;
@@ -40,6 +41,7 @@ public class CharacterInputControllerTest : MonoBehaviour
         h = Input.GetAxis("Horizontal") * speed;
         hasPU = GetComponent<PowerUpCollector>().hasPU;
         hasRifle = GetComponent<PowerUpCollector>().hasRifle;
+        hasTimePill = GetComponent<PowerUpCollector>().hasTimePill;
         transform.Rotate(0, h, 0);
         if (hasPU)
         {
@@ -49,6 +51,10 @@ public class CharacterInputControllerTest : MonoBehaviour
         {
             gameObject.transform.GetChild(3).gameObject.SetActive(true);
             //Debug.Log("hasRifle");
+        }
+        if (hasTimePill)
+        {
+            Debug.Log("Time Pill Collected");
         }
         if (v != 0)
         {
@@ -132,7 +138,7 @@ public class CharacterInputControllerTest : MonoBehaviour
 
     void Shoot()
     {
-        if (Vector3.Distance(gameObject.transform.GetChild(3).gameObject.transform.position, GameObject.Find("Bunny1").transform.position) < 20f)
+        /*if (Vector3.Distance(gameObject.transform.GetChild(3).gameObject.transform.position, GameObject.Find("Bunny1").transform.position) < 20f)
         {
             Debug.Log("Bunny1");
             Destroy(GameObject.Find("Bunny1"));
@@ -144,18 +150,19 @@ public class CharacterInputControllerTest : MonoBehaviour
         {
             Debug.Log("Bunny3");
             Destroy(GameObject.Find("Bunny3"));
-        }
-        /*RaycastHit hit;
+        }*/
+        RaycastHit hit;
         if (Physics.Raycast(gameObject.transform.GetChild(3).gameObject.transform.position, gameObject.transform.GetChild(3).gameObject.transform.forward, out hit, shootRange))
         {
-            Debug.Log("loc" + gameObject.transform.GetChild(3).gameObject.transform.position);
-            Debug.Log("hey" + hit.transform.name);
-            Target target = hit.transform.GetComponent<Target>();
-            if (target != null)
+            Debug.Log("hey-------------------" + hit.transform.name);
+            //Target target = hit.transform.GetComponent<Target>();
+            GameObject enemy = hit.collider.gameObject;
+            Debug.Log("collided with" + enemy.tag);
+            if (enemy.tag == "enemy")
             {
-                Debug.Log("--------------------------------------------------------------");
-                Destroy(target);
+                Debug.Log("-------------------------------------------");
+                Destroy(enemy);
             }
-        }*/
+        }
     }
 }

@@ -6,6 +6,7 @@ public class PowerUpCollector : MonoBehaviour
 {
     public bool hasPU;
     public bool hasRifle;
+    public bool hasTimePill;
     // Use this for initialization
     void Start()
     {
@@ -27,5 +28,10 @@ public class PowerUpCollector : MonoBehaviour
     public void ReceiveRifle()
     {
         hasRifle = true;
+    }
+
+    public void ReceiveTimePill()
+    {
+        hasTimePill = true;
     }
 }
