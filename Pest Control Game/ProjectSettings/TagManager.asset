@@ -7,6 +7,7 @@ TagManager:
   - player
   - wall
   - PU
+  - Door
   layers:
   - Default
   - TransparentFX
