@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -657,7 +657,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &36897235
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -31785,8 +31785,6 @@ MonoBehaviour:
   isColliding: 0
   timeSaved: 0
   hasPU: 0
-  hasRifle: 0
-  shootRange: 100
 --- !u!136 &1604424737
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -31827,8 +31825,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPU: 0
-  hasRifle: 0
-  hasTimePill: 0
 --- !u!114 &1604424740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31876,12 +31872,9 @@ MonoBehaviour:
   v: 0
   h: 0
   hasPU: 0
-  hasRifle: 0
-  hasTimePill: 0
   runTimeCount: 0
   speed: 1
   reseted: 0
-  shootRange: 100
 --- !u!1 &1605911140
 GameObject:
   m_ObjectHideFlags: 0
