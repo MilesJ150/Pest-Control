@@ -27,7 +27,7 @@ public class CharacterInputController : MonoBehaviour
         gameObject.transform.GetChild(3).gameObject.SetActive(false);
     }
 
-    void OnCollisionEnter (Collider target)
+    void OnCollisionEnter (Collision target)
     {
         count += 1;
         if (target.gameObject.tag.Equals("wall") == true)
