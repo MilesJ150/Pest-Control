@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-public class BunnyAI : MonoBehaviour {
+public class LizardAI : MonoBehaviour {
 	private NavMeshAgent agent;
 	private Animator anim;
 	public GameObject[] waypoints;
