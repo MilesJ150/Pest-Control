@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-public class BunnyAI : MonoBehaviour {
+public class TurtleAI : MonoBehaviour {
 	private NavMeshAgent agent;
 	private Animator anim;
 	public GameObject[] waypoints;
@@ -16,6 +16,7 @@ public class BunnyAI : MonoBehaviour {
 	public float distance;
 	public float melee_threshold;
 	public float footstep_threshold;
+	public float chase_threshold;
 	public float multiplier;
 	public float offset;
 	public NavMeshHit hit;
@@ -64,8 +65,10 @@ public class BunnyAI : MonoBehaviour {
 			if (distance < melee_threshold) 
 			{
 				aiState = AIState.HitPlayerWithMeleeWeapon;
-			} 
-
+			} else if (distance > melee_threshold && distance < chase_threshold)
+			{
+				aiState = AIState.ChasePlayer;
+			}
 			else {
 				if (distance > melee_threshold && distance < footstep_threshold && counter % 15 ==0) {
 					enemyFootStepSource.Play ();
@@ -80,24 +83,30 @@ public class BunnyAI : MonoBehaviour {
 				anim.SetTrigger ("Walk");
 			}
 			break;
-		/*case AIState.ChasePlayer:
+		case AIState.ChasePlayer:
 			//SteerToClosestAmmoDepot()
-			if (NavMesh.Raycast (this.transform.position, this.transform.position + agentVelocity*multiplier, out hit, 0)) {
-				agent.speed = 0f;
-			} else {
-				agent.speed = agentSpeed;
-			}
-			if (distance >= threshold) 
+			if (distance > chase_threshold) 
 			{
 				aiState = AIState.Patrol;
+			} 
+			else if (distance < melee_threshold) 
+			{
+				aiState = AIState.HitPlayerWithMeleeWeapon;
 			}
 			else 
 			{
-				agent.SetDestination (pos + velocity * multiplier);
+				if (distance > melee_threshold && distance < footstep_threshold && counter % 10 ==0) {
+					enemyFootStepSource.Play ();
+
+
+				} else {
+					enemyFootStepSource.Pause ();
+				}
+				agent.SetDestination (pos);
 				anim.SetFloat ("vely", agent.velocity.magnitude / agent.speed);
 			}
 			break;
-			//... TODO handle other states*/
+			//... TODO handle other states
 		case AIState.HitPlayerWithMeleeWeapon:
 			movingWayPoint.GetComponent<CharacterHitByEnemy>().SetHitInfo (true);
 			aiState = AIState.Patrol;
