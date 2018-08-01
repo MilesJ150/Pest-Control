@@ -7307,7 +7307,7 @@ GameObject:
   - component: {fileID: 343110313}
   m_Layer: 0
   m_Name: Turtle2
-  m_TagString: enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21517,7 +21517,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1079714181109206, guid: 2f2d25c34b7dcaa478ed59d3a9ab9e9f, type: 2}
       propertyPath: m_TagString
-      value: enemy
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f2d25c34b7dcaa478ed59d3a9ab9e9f, type: 2}
@@ -27242,7 +27242,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1079714181109206, guid: 2f2d25c34b7dcaa478ed59d3a9ab9e9f, type: 2}
       propertyPath: m_TagString
-      value: enemy
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f2d25c34b7dcaa478ed59d3a9ab9e9f, type: 2}
@@ -27512,7 +27512,7 @@ GameObject:
   - component: {fileID: 1306670280}
   m_Layer: 0
   m_Name: Turtle3
-  m_TagString: enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31019,7 +31019,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1079714181109206, guid: 2f2d25c34b7dcaa478ed59d3a9ab9e9f, type: 2}
       propertyPath: m_TagString
-      value: enemy
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f2d25c34b7dcaa478ed59d3a9ab9e9f, type: 2}
@@ -35752,7 +35752,7 @@ GameObject:
   - component: {fileID: 1725373016}
   m_Layer: 0
   m_Name: Turtle1
-  m_TagString: enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
