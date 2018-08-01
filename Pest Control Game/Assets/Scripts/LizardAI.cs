@@ -22,6 +22,8 @@ public class LizardAI : MonoBehaviour {
 	public float agentSpeed;
 	public AudioSource enemyFootStepSource;
 	public int counter;
+	public CharacterInputControllerTest speedScript;
+	public bool hasHit;
 	public enum AIState
 	{
 		Patrol,
@@ -46,6 +48,7 @@ public class LizardAI : MonoBehaviour {
 		velocity = vr.prevVelocity;
 		pos = movingWayPoint.transform.position;
 		agentSpeed = agent.speed;
+		hasHit = false;
 	}
 	
 	// Update is called once per frame
@@ -99,6 +102,12 @@ public class LizardAI : MonoBehaviour {
 			break;
 			//... TODO handle other states*/
 		case AIState.HitPlayerWithMeleeWeapon:
+			if (!hasHit) {
+				movingWayPoint.transform.localScale *= 0.25f;
+				speedScript = movingWayPoint.GetComponent<CharacterInputControllerTest> ();
+				speedScript.speed = 20f;
+				hasHit = true;
+			}
 			movingWayPoint.GetComponent<CharacterHitByEnemy>().SetHitInfo (true);
 			aiState = AIState.Patrol;
 			break;
