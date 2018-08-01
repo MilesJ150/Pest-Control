@@ -30108,6 +30108,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4208003243363582, guid: 8ee5a3dca8fd4c2409e05f10ec3f7152, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ee5a3dca8fd4c2409e05f10ec3f7152, type: 2}
   m_IsPrefabAsset: 0
