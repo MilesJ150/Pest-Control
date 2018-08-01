@@ -56,6 +56,7 @@ public class CharacterInputControllerTest : MonoBehaviour
         if (hasTimePill)
         {
             Debug.Log("Time Pill Collected");
+            hasTimePill = true;
         }
         if (v != 0)
         {
