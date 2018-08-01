@@ -10,7 +10,7 @@ public class LevelOver : MonoBehaviour {
     {
         if (c.attachedRigidbody != null)
         {
-            SceneManager.LoadScene("GameOverScreen");
+            SceneManager.LoadScene("Start");
             ended = true;
         }
     }
