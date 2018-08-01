@@ -36,8 +36,4 @@ public class PowerUpCollector : MonoBehaviour
         hasTimePill = true;
     }
 
-    public void endGame()
-    {
-        endGame = true;
-    }
 }

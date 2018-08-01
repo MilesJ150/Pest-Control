@@ -25217,7 +25217,7 @@ GameObject:
   - component: {fileID: 1204073030}
   m_Layer: 0
   m_Name: Clock
-  m_TagString: Untagged
+  m_TagString: timeTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44723,7 +44723,7 @@ GameObject:
   - component: {fileID: 2137034566}
   m_Layer: 0
   m_Name: Exit
-  m_TagString: Untagged
+  m_TagString: exit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44752,6 +44752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41e704610d642354ca6a31bbec39f7d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ended: 0
 --- !u!65 &2137034567
 BoxCollider:
   m_ObjectHideFlags: 0

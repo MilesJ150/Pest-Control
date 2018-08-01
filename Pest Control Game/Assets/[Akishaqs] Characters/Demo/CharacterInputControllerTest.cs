@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterInputControllerTest : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class CharacterInputControllerTest : MonoBehaviour
     public bool hasRifle;
     public bool hasTimePill;
     public bool gameEnded;
+    public Text gameEndedTime;
     public float runTimeCount;
     public float speed = 10.0f;
     public bool reseted = false;
@@ -44,7 +46,12 @@ public class CharacterInputControllerTest : MonoBehaviour
         hasPU = GetComponent<PowerUpCollector>().hasPU;
         hasRifle = GetComponent<PowerUpCollector>().hasRifle;
         hasTimePill = GetComponent<PowerUpCollector>().hasTimePill;
+        gameEnded = GameObject.FindGameObjectWithTag("exit").GetComponent<LevelOver>().ended;
         transform.Rotate(0, h, 0);
+        if(gameEnded)
+        {
+            gameEndedTime = GameObject.FindGameObjectWithTag("timeTag").GetComponent<Timer>().counterText;
+        }
         if (hasPU)
         {
             runTimeCount = 5;
