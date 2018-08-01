@@ -15701,11 +15701,11 @@ GameObject:
   - component: {fileID: 732796680}
   m_Layer: 0
   m_Name: Lizard1
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &732796680
 Transform:
   m_ObjectHideFlags: 0
@@ -21515,6 +21515,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1079714181109206, guid: 2f2d25c34b7dcaa478ed59d3a9ab9e9f, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f2d25c34b7dcaa478ed59d3a9ab9e9f, type: 2}
   m_IsPrefabAsset: 0
@@ -27236,6 +27240,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1079714181109206, guid: 2f2d25c34b7dcaa478ed59d3a9ab9e9f, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f2d25c34b7dcaa478ed59d3a9ab9e9f, type: 2}
   m_IsPrefabAsset: 0
@@ -31008,6 +31016,10 @@ Prefab:
     - target: {fileID: 4881557845238512, guid: 2f2d25c34b7dcaa478ed59d3a9ab9e9f, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079714181109206, guid: 2f2d25c34b7dcaa478ed59d3a9ab9e9f, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f2d25c34b7dcaa478ed59d3a9ab9e9f, type: 2}
@@ -39296,6 +39308,10 @@ Prefab:
     - target: {fileID: 4173535057559874, guid: 3301e6176c4a6fd4c905e3c12c21ada3, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505308878844450, guid: 3301e6176c4a6fd4c905e3c12c21ada3, type: 2}
+      propertyPath: m_TagString
+      value: enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3301e6176c4a6fd4c905e3c12c21ada3, type: 2}
