@@ -8,7 +8,7 @@ public class GameOverTime : MonoBehaviour {
     // Use this for initialization
     void Start () {
 		finalTime = GetComponent<Text>() as Text;
-        //finalTime = GameObject.FindGameObjectWithTag("player").GetComponent<CharacterInputControllerTest>().gameEndedTime;
+        finalTime = GameObject.FindGameObjectWithTag("player").GetComponent<CharacterInputControllerTest>().gameEndedTime;
     }
 	
 	// Update is called once per frame
