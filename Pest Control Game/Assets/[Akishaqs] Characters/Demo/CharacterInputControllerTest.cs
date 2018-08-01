@@ -12,7 +12,7 @@ public class CharacterInputControllerTest : MonoBehaviour
     public bool hasRifle;
     public bool hasTimePill;
     public float runTimeCount;
-    public float speed = 1.0f;
+    public float speed = 10.0f;
     public bool reseted = false;
     public float shootRange = 100f;
 
@@ -38,8 +38,8 @@ public class CharacterInputControllerTest : MonoBehaviour
                 //anim.SetTrigger("flashing");
             }
         }
-        v = Input.GetAxis("Vertical") * speed;
-        h = Input.GetAxis("Horizontal") * speed;
+        v = Input.GetAxis("Vertical") * 10.0f;
+        h = Input.GetAxis("Horizontal");
         hasPU = GetComponent<PowerUpCollector>().hasPU;
         hasRifle = GetComponent<PowerUpCollector>().hasRifle;
         hasTimePill = GetComponent<PowerUpCollector>().hasTimePill;
