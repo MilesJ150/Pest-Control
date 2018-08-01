@@ -31,16 +31,15 @@ public class PauseMenu : MonoBehaviour {
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
-}
 
-    private void Pause()
+    void Pause ()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
 
-    public void LoadMenu()
+    public void LoadMenu ()
     {
         Debug.Log("Loading Menu...");
         Time.timeScale = 1f;
