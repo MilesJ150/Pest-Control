@@ -11,6 +11,7 @@ public class CharacterInputControllerTest : MonoBehaviour
     public bool hasPU;
     public bool hasRifle;
     public bool hasTimePill;
+    public bool gameEnded;
     public float runTimeCount;
     public float speed = 10.0f;
     public bool reseted = false;
