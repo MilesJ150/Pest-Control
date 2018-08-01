@@ -328,7 +328,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 402fbe5d2fc4b6142827f49bbffb2b32, type: 2}
+  - {fileID: 2100000, guid: 331388249aa078742b638630bb268f1c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -362,7 +362,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 5243268}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.9, y: 2.03, z: 7.7}
+  m_LocalPosition: {x: 23.9, y: 1, z: 7.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2137034565}
@@ -16121,11 +16121,11 @@ GameObject:
   - component: {fileID: 732796680}
   m_Layer: 0
   m_Name: Lizard1
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &732796680
 Transform:
   m_ObjectHideFlags: 0
@@ -21933,6 +21933,10 @@ Prefab:
     - target: {fileID: 4881557845238512, guid: 2f2d25c34b7dcaa478ed59d3a9ab9e9f, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079714181109206, guid: 2f2d25c34b7dcaa478ed59d3a9ab9e9f, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
@@ -28166,6 +28170,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1079714181109206, guid: 2f2d25c34b7dcaa478ed59d3a9ab9e9f, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_IsPrefabParent: 0
@@ -31939,6 +31947,10 @@ Prefab:
     - target: {fileID: 4881557845238512, guid: 2f2d25c34b7dcaa478ed59d3a9ab9e9f, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079714181109206, guid: 2f2d25c34b7dcaa478ed59d3a9ab9e9f, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
@@ -40231,6 +40243,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1505308878844450, guid: 3301e6176c4a6fd4c905e3c12c21ada3, type: 2}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_IsPrefabParent: 0
@@ -45184,7 +45200,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2137034564}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.1, z: 0}
+  m_LocalPosition: {x: 0, y: -3, z: 0}
   m_LocalScale: {x: 2, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 5243272}
