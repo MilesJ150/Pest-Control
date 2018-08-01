@@ -15875,7 +15875,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &732796680
 Transform:
   m_ObjectHideFlags: 0
@@ -33611,6 +33611,7 @@ MonoBehaviour:
   hasPU: 0
   hasRifle: 0
   hasTimePill: 0
+  endGame: 0
 --- !u!114 &1604424740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33660,6 +33661,8 @@ MonoBehaviour:
   hasPU: 0
   hasRifle: 0
   hasTimePill: 0
+  gameEnded: 0
+  gameEndedTime: {fileID: 0}
   runTimeCount: 0
   speed: 1
   reseted: 0
@@ -34608,7 +34611,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4208003243363582, guid: 8ee5a3dca8fd4c2409e05f10ec3f7152, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -21.13
+      value: -20.9
       objectReference: {fileID: 0}
     - target: {fileID: 4208003243363582, guid: 8ee5a3dca8fd4c2409e05f10ec3f7152, type: 2}
       propertyPath: m_LocalPosition.y
@@ -34616,7 +34619,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4208003243363582, guid: 8ee5a3dca8fd4c2409e05f10ec3f7152, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -22.51
+      value: -22.3
       objectReference: {fileID: 0}
     - target: {fileID: 4208003243363582, guid: 8ee5a3dca8fd4c2409e05f10ec3f7152, type: 2}
       propertyPath: m_LocalRotation.x
