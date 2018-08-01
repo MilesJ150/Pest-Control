@@ -103,9 +103,9 @@ public class LizardAI : MonoBehaviour {
 			//... TODO handle other states*/
 		case AIState.HitPlayerWithMeleeWeapon:
 			if (!hasHit) {
-				movingWayPoint.transform.localScale *= 0.25f;
-				speedScript = movingWayPoint.GetComponent<CharacterInputControllerTest> ();
-				speedScript.speed = 20f;
+				//movingWayPoint.transform.localScale *= 0.25f;
+				//speedScript = movingWayPoint.GetComponent<CharacterInputControllerTest> ();
+				//speedScript.speed = 20f;
 				hasHit = true;
 			}
 			movingWayPoint.GetComponent<CharacterHitByEnemy>().SetHitInfo (true);
